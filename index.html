@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="assests/css/style.css" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assests/css/fontawesome-free/css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assests/css/mainstyle.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="assests/css/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "", ""],
+          ["2004", 1000, 400],
+          ["2005", 1170, 460],
+          ["2006", 660, 1120],
+          ["2007", 1030, 540],
+          ["2008", 660, 1120],
+          ["2009", 660, 1120],
+        ]);
+
+        var options = {
+          title: "",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav
+        class="main-header navbar navbar-expand navbar-white navbar-light"
+        style="height: 89px; background-color: transparent !important;"
+      >
+        <!-- Left navbar links -->
+        <ul class="navbar-nav" style="line-height: 25px;">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto" style="line-height: 25px;">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="" href="#" role="button"
+              ><i class="fas fa-th-large"></i>&nbsp;&nbsp; DASHBOARD</a
+            >
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto" style="line-height: 45px;">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+          </li>
+          <li class="navbar-nav ml-auto">
+            <div class="image">
+              <img
+                height="57px"
+                width="56px"
+                src="assests/images/profile.png"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="" style="line-height: 60px;">
+              <a href="#" class="d-block">&nbsp;&nbsp;&nbsp;User image</a>
+            </div>
+          </li>
+          <li class="nav-item" style="line-height: 48px;">
+            <a
+              class="nav-link"
+              data-widget="control-sidebar"
+              data-slide="false"
+              href="#"
+              role="button"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link">
+          <img
+            src="assests/images/Layer 2 (1).svg"
+            alt="Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8;"
+          />
+          <span class="brand-text font-weight-light">Stream Buddy</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="assests/images/profile.png"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">User image</a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Widgets
+                    <span class="right badge badge-danger">New</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>
+                    Layout Options
+                    <i class="fas fa-angle-left right"></i>
+                    <span class="badge badge-info right">6</span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Top Navigation</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-music"></i>
+                  <p>
+                    Music
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/charts/chartjs.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>ChartJS</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-user-friends"></i>
+                  <p>
+                    Users
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/UI/general.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>General</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-shopping-cart"></i>
+                  <p>
+                    Carts
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/forms/general.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>General Elements</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-question-circle"></i>
+                  <p>
+                    Help
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Simple Tables</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                    Calendar
+                    <span class="badge badge-info right">2</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-image"></i>
+                  <p>
+                    Gallery
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Mailbox
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Inbox</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>
+                    Pages
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Invoice</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-plus-square"></i>
+                  <p>
+                    Extras
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Login</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- Main row -->
+            <div class="row">
+              <!-- Left col -->
+              <section class="col-lg-7">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">
+                      Schedule streams
+                    </h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <div class="tab-content p-0">
+                      <div
+                        class="chart tab-pane active"
+                        id="curve_chart"
+                        style="height: 225px;"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </section>
+              <!-- /.Left col -->
+
+              <section class="col-lg-5">
+                <div class="row">
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-facebook-square"
+                            style="
+                              color: #3b5998;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Facebook</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Schedule)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>02</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-facebook-square"
+                            style="
+                              color: #3b5998;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Facebook</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Completed)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>00</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-youtube"
+                            style="
+                              color: #ff0000;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Youtube</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Schedule)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>00</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-youtube"
+                            style="
+                              color: #ff0000;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Youtube</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Completed)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>00</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-instagram-square"
+                            style="
+                              color: #c13584;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Youtube</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Schedule)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>00</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card media-cards">
+                      <div class="row">
+                        <div class="col-sm-3" style="height: 50px;">
+                          <i
+                            class="fab fa-instagram-square"
+                            style="
+                              color: #c13584;
+                              line-height: 50px;
+                              font-size: 40px;
+                            "
+                          ></i>
+                        </div>
+                        <div
+                          class="col-sm-6"
+                          style="
+                            line-height: 25px;
+                            font-size: 15px;
+                            text-align: center;
+                          "
+                        >
+                          <span>Youtube</span>
+                          <i
+                            class="fas fa-calendar-check"
+                            style="color: #3b5998;"
+                            >&nbsp;<span>(Completed)</span></i
+                          >
+                        </div>
+                        <div
+                          class="col-sm-3"
+                          style="color: #3b5998; padding-top: 5px;"
+                        >
+                          <h2>00</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- right col -->
+            </div>
+            <!-- /.row (main row) -->
+
+            <!-- vedio info -->
+            <section class="content">
+              <div
+                class="container-fluid"
+                style="
+                  background-color: #fff;
+                  padding: 15px;
+                  border-radius: 5px;
+                "
+              >
+                <!-- Main row -->
+                <div class="row">
+                  <section class="col-lg-6">Vedio info</section>
+                  <section class="col-lg-6" style="text-align: right;">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      id="search-text-input"
+                    />
+                  </section>
+                  <div class="col-lg-2 offset-lg-2 col-sm-6">
+                    Platform
+                    <select>
+                      <option>Facebook</option>
+                      <option>Youtube</option>
+                      <option>Instagram</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-8 col-sm-6">
+                    <i class="fas fa-th-list" style="color: blue;"></i>&nbsp;
+                    &nbsp;
+                    <i class="fas fa-list-ul"></i>
+                  </div>
+                  <div class="container">
+                    <div class="col-lg-12 mt-4">
+                      <div class="row" style="text-align: left;">
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-facebook-square"
+                                  style="color: #3b5998; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Facebook</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Facebook title</p>
+                              </div>
+                              <div
+                                class="col-lg-3 col-sm-3 ml-3"
+                                style="color: red;"
+                              >
+                                <i class="fas fa-eye"></i>&nbsp; View<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: green;"
+                              >
+                                <i class="far fa-comments"></i>
+                                &nbsp;comment<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; 0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: indigo;"
+                              >
+                                <i class="far fa-thumbs-up"></i>
+                                &nbsp;like<br />
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button class="btn btn-primary">
+                                  Facebook
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-youtube"
+                                  style="color: #ff0000; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Youtube</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Youtube title</p>
+                              </div>
+                              <div
+                                class="col-lg-3 col-sm-3 ml-3"
+                                style="color: red;"
+                              >
+                                <i class="fas fa-eye"></i>&nbsp; View<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: green;"
+                              >
+                                <i class="far fa-comments"></i>
+                                &nbsp;comment<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; 0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: indigo;"
+                              >
+                                <i class="far fa-thumbs-up"></i>
+                                &nbsp;like<br />
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button
+                                  class="btn btn-primary"
+                                  style="background-color: #ff0000;"
+                                >
+                                  Youtube
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-instagram-square"
+                                  style="color: #c13584; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Instagram</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Instagram title</p>
+                              </div>
+                              <div
+                                class="col-lg-3 col-sm-3 ml-3"
+                                style="color: red;"
+                              >
+                                <i class="fas fa-eye"></i>&nbsp; View<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: green;"
+                              >
+                                <i class="far fa-comments"></i>
+                                &nbsp;comment<br />&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; 0
+                              </div>
+                              <div
+                                class="col-lg-4 col-sm-4"
+                                style="color: indigo;"
+                              >
+                                <i class="far fa-thumbs-up"></i>
+                                &nbsp;like<br />
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+                              </div>
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button
+                                  class="btn btn-primary"
+                                  style="background-color: #c13584;"
+                                >
+                                  Instagram
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./row -->
+              </div>
+            </section>
+            <!-- /.Vedio info -->
+
+            <!-- Stream details -->
+
+            <section class="content">
+              <div
+                class="container-fluid"
+                style="
+                  background-color: #fff;
+                  padding: 15px;
+                  border-radius: 5px;
+                "
+              >
+                <!-- Main row -->
+                <div class="row">
+                  <section class="col-lg-6">Streams Details</section>
+                  <section class="col-lg-6" style="text-align: right;">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      id="search-text-input"
+                    />
+                  </section>
+                  <div class="col-lg-2 offset-lg-2 col-sm-6">
+                    Platform
+                    <select>
+                      <option>Facebook</option>
+                      <option>Youtube</option>
+                      <option>Instagram</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-8 col-sm-6">
+                    <i class="fas fa-th-list" style="color: blue;"></i>&nbsp;
+                    &nbsp;
+                    <i class="fas fa-list-ul"></i>
+                  </div>
+                  <div class="container">
+                    <div class="col-lg-12 mt-4">
+                      <div class="row" style="text-align: left;">
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-facebook-square"
+                                  style="color: #3b5998; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Facebook</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Facebook title</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Media</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>07_08_2020 lls</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Status</p>
+                              </div>
+                              <div class="col-sm-4" style="font-size: 15px;">
+                                <p
+                                  style="
+                                    background-color: #b8e994;
+                                    padding: 5px;
+                                    text-align: center;
+                                  "
+                                >
+                                  <i class="far fa-check-circle"></i
+                                  >&nbsp;Completed
+                                </p>
+                              </div>
+                              <div
+                                class="col-lg-6 col-sm-5 ml-3"
+                                style="color: rgb(76, 146, 250);"
+                              >
+                                <i class="far fa-calendar-alt"></i>&nbsp;
+                                2020-07-08
+                              </div>
+                              <div
+                                class="col-lg-5 col-sm-6"
+                                style="color: rgb(248, 138, 248);"
+                              >
+                                <i class="far fa-clock"></i>
+                                &nbsp;7:15:59
+                              </div>
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button class="btn btn-primary">
+                                  Facebook
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-youtube"
+                                  style="color: #ff0000; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Youtube</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Youtube title</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Media</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>07_08_2020 lls</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Status</p>
+                              </div>
+                              <div class="col-sm-4" style="font-size: 15px;">
+                                <p
+                                  style="
+                                    background-color: #b8e994;
+                                    padding: 5px;
+                                    text-align: center;
+                                  "
+                                >
+                                  <i class="far fa-check-circle"></i
+                                  >&nbsp;Completed
+                                </p>
+                              </div>
+                              <div
+                                class="col-lg-6 col-sm-5 ml-3"
+                                style="color: rgb(76, 146, 250);"
+                              >
+                                <i class="far fa-calendar-alt"></i>&nbsp;
+                                2020-07-08
+                              </div>
+                              <div
+                                class="col-lg-5 col-sm-6"
+                                style="color: rgb(248, 138, 248);"
+                              >
+                                <i class="far fa-clock"></i>
+                                &nbsp;7:15:59
+                              </div>
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button
+                                  class="btn btn-primary"
+                                  style="background-color: #ff0000;"
+                                >
+                                  Youtube
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="card vedio-media">
+                            <div class="row">
+                              <div
+                                class="col-sm-12 mt-2"
+                                style="text-align: center;"
+                              >
+                                <i
+                                  class="fab fa-instagram-square"
+                                  style="color: #c13584; font-size: 90px;"
+                                ></i>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Playlist Name</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>My new Instagram</p>
+                              </div>
+
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Title</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>Instagram title</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Media</p>
+                              </div>
+                              <div class="col-sm-7" style="font-size: 15px;">
+                                <p>07_08_2020 lls</p>
+                              </div>
+                              <div
+                                class="col-sm-4 ml-3"
+                                style="
+                                  font-size: 15px;
+
+                                  color: #3b5998;
+                                "
+                              >
+                                <p>Status</p>
+                              </div>
+                              <div class="col-sm-4" style="font-size: 15px;">
+                                <p
+                                  style="
+                                    background-color: #b8e994;
+                                    padding: 5px;
+                                    text-align: center;
+                                  "
+                                >
+                                  <i class="far fa-check-circle"></i
+                                  >&nbsp;Completed
+                                </p>
+                              </div>
+
+                              <div
+                                class="col-lg-6 ml-3 col-sm-5"
+                                style="color: rgb(76, 146, 250);"
+                              >
+                                <i class="far fa-calendar-alt"></i>&nbsp;
+                                2020-07-08
+                              </div>
+                              <div
+                                class="col-lg-5 col-sm-6"
+                                style="color: rgb(248, 138, 248);"
+                              >
+                                <i class="far fa-clock"></i>
+                                &nbsp;7:15:59
+                              </div>
+
+                              <div
+                                class="col-lg-12 mt-3 mb-3"
+                                style="text-align: center;"
+                              >
+                                <button
+                                  class="btn btn-primary"
+                                  style="background-color: #c13584;"
+                                >
+                                  Instagram
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./row -->
+              </div>
+            </section>
+
+            <!-- ./Stream Details -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- video info -->
+
+      <!-- /video info -->
+
+      <footer class="main-footer">
+        <strong>Copyright &copy; 2017-2020 <a href="#">softcad</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b>
+        </div>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="assests/js/jquery/jquery.min.js"></script>
+    <script src="assests/js/jquery/overlayScrollbar.js"></script>
+  </body>
+</html>
